@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>jQuery Mobile Docs - Text inputs</title> 
+	<link rel="stylesheet"  href="file:///android_asset/www/jquery.mobile-1.2.0.min.css" />
+	<script src="file:///android_asset/www/jquery-1.8.2.min.js"></script>
+	<script src="file:///android_asset/www/jquery.mobile-1.2.0.min.js"></script>
+
+	<script type="text/javascript">
+		// Make cordova be happy
+		$( document ).bind( "mobileinit", function() {
+		    // Make your jQuery Mobile framework configuration changes here!
+		    $.support.cors = true;
+		    $.mobile.allowCrossDomainPages = true;
+		    $.mobile.pushStateEnabled = false;
+		});
+	</script>
+</head> 
+<body> 
+	<div data-role="page" class="type-interior">
+
+		<div data-role="header" data-theme="f">
+			<h1>Please Input the URL</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<div class="content-primary">
+			
+			     <label for="basic">URL:</label>
+		         <input type="url" name="app_url" id="app_url" value="" />
+		         <br>
+		         <input type="button" value="Go" id="go_to_url" name="go_to_url" />		
+		
+			</div><!--/content-primary -->	
+
+		</div><!-- /content -->
+
+		<div data-role="footer" class="footer-docs" data-theme="c">
+				<p class="jqm-version"></p>
+				<p>&copy; Geoinformatics @ ISchool of PITT & Zhan Caibao(iJab)</p>
+		</div>
+		
+	</div><!-- /page -->
+
+	<script type="text/javascript">
+		// Make cordova be happy
+		$('#go_to_url').bind( "vclick", function() {
+			if($("#app_url").val())
+			{
+		    	window.location.href = $("#app_url").val();
+			}
+		});
+
+		$('#app_url').keypress(function(event) {
+			if (event.keyCode == '13') {
+				event.preventDefault();
+
+				if($("#app_url").val())
+				{
+			    	window.location.href = $("#app_url").val();
+				}
+			}
+		});
+	</script>
+</body>
+</html>

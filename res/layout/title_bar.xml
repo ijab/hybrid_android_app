@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>     
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"     
+    android:orientation="horizontal"  
+    android:layout_width="fill_parent"   
+    android:layout_height="fill_parent">
+    
+    <ImageButton
+        android:id="@+id/appHomeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"        
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/apps_home"
+        android:contentDescription="@string/homeDesc" />
+    
+    <ImageButton
+        android:id="@+id/appUrlBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"        
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/appHomeBtn"
+        android:src="@drawable/apps_url"
+        android:contentDescription="@string/urlDesc" />
+
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/app_name" />
+
+    <ImageButton
+        android:id="@+id/aboutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/about"
+        android:contentDescription="@string/aboutDesc" />
+          
+</RelativeLayout>
