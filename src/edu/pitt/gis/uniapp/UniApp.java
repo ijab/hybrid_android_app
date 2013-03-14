@@ -66,7 +66,7 @@ public final class UniApp extends Activity implements CordovaInterface
 {
 	public static final String TAG = "GISUniApp";
     //public static final String HOME_URL = "http://192.168.0.104:10080/wheelchair/index.php/mobile/mapps/hybrid";
-    public static final String HOME_URL = "http://150.212.42.133:10080/wheelchair/index.php/mobile/mapps/hybrid";
+    public static final String HOME_URL = "http://gis36.exp.sis.pitt.edu/pam/index.php/mobile/mapps/hybrid";
 	
     protected boolean customTitleSupported = false;
     protected AboutDialog about;
